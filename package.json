@@ -4,10 +4,11 @@
     "seed": "ts-node ./prisma/seed.mjs"
   },
   "scripts": {
-    "build": "next build",
+    "build": "prisma generate && next build",
     "dev": "next dev --turbopack",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@google/generative-ai": "^0.22.0",
